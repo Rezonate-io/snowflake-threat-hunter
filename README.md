@@ -6,4 +6,4 @@ This script reads the SQL queries under ./queries and writes the results to CSV 
 
 To execute the script, you can use the following command-line format:
 
-`python snowflake_user_bruteforce.py --account <snowflake_account> --username <snowflake_username> --password <password> --db <database_name>`
+`python snowflake_threat_hunting.py --account <snowflake_account> --username <snowflake_username> --password <password> --db <database_name>`
