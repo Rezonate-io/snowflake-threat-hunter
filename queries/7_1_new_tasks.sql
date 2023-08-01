@@ -1,0 +1,5 @@
+-- Search for new tasks
+select *
+from SNOWFLAKE.ACCOUNT_USAGE.QUERY_HISTORY 
+where REGEXP_LIKE(QUERY_TEXT, '.*CREATE\\s+(OR\\s+REPLACE\\s+)?TASK.*', 'i')
+and START_TIME >= DATEADD(HOUR, -24, CURRENT_TIMESTAMP());
